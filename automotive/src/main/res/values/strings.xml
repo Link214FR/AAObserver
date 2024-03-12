@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AAObserver</string>
+    <!-- MainActivity -->
+    <string name="main_instant_charge_rate">EV_BATTERY_INSTANTANEOUS_CHARGE_RATE:</string>
+    <string name="main_raw_instant_charge_rate">EV_BATTERY_INSTANTANEOUS_CHARGE_RATE RAW:</string>
+    <string name="main_property_value_placeholder">NOT RECEIVED YET</string>
+</resources>
