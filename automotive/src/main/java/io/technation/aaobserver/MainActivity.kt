@@ -184,6 +184,7 @@ class MainActivity : Activity() {
             VehiclePropertyIds.GEAR_SELECTION -> return resolveGearProperty(prop.value as Int)
             VehiclePropertyIds.CURRENT_GEAR -> return resolveGearProperty(prop.value as Int)
             VehiclePropertyIds.IGNITION_STATE -> return  resolveIgnitionStateProperty(prop.value as Int)
+            VehiclePropertyIds.WHEEL_TICK -> return  resolveWheelTickProperty(prop.value as Array<Long>)
         }
         return prop.value.toString()
     }
@@ -218,5 +219,9 @@ class MainActivity : Activity() {
             VehicleIgnitionState.UNDEFINED -> return "UNDEFINED"
         }
         return value.toString()
+    }
+
+    private fun resolveWheelTickProperty(value: Array<Long> ): String {
+        return String.format("RST : %s\nFL : %s\nFR : %s\nRR : %s\nRL : %s\n", value[0], value[1], value[2], value[3], value[4])
     }
 }
